@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App Download</title>
+</head>
+<body>
+    <h1>Chat Client and Server Download</h1>
+    
+    <p>
+        <a href="chat-client.py" download="chat-client.py">Download Chat Client (chat-client.py)</a>
+    </p>
+    <p>
+        <a href="chat-server.py" download="chat-server.py">Download Chat Server (chat-server.py)</a>
+    </p>
+
+    <!-- Script to trigger simultaneous download -->
+    <button onclick="downloadFiles()">Download Both Files</button>
+
+    <script>
+        function downloadFiles() {
+            const clientLink = document.createElement('a');
+            clientLink.href = 'chat-client.py';
+            clientLink.download = 'chat-client.py';
+            clientLink.click();
+
+            const serverLink = document.createElement('a');
+            serverLink.href = 'chat-server.py';
+            serverLink.download = 'chat-server.py';
+            serverLink.click();
+        }
+    </script>
+</body>
+</html>
